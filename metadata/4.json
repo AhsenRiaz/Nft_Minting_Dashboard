@@ -1,0 +1,20 @@
+{
+    "name": "Ahsen NFT Collection NFT #4",
+    "description": "Ahsen's first web3 dapp NFT Collection. This unique collection 1 of 1000 NFTs available",
+    "image": "https://gateway.pinata.cloud/ipfs/QmWZMa3m8zgdXcPLDJrJcXybekhAEKboEXkmqA6LLmAg4g/4.jpeg",
+    "edition" : 4,
+    "attributes": [
+        {
+            "trait_type" : "Background",
+            "value" : "offwhite"
+        },
+        {
+            "trait_type": "smoking",
+            "value" : "false"
+        },
+        {
+            "trait_type" : "color",
+            "value": "white"
+        }
+    ]
+}
