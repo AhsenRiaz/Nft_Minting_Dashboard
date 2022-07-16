@@ -62,8 +62,9 @@ function App() {
 
   const connectWallet = async () => {
     try {
-      if ((window as any).ethereum) {
-        let web3 = new Web3((window as any).ethereum);
+      if (Web3.givenProvider) {
+        await Web3.givenProvider.enable();
+        let web3 = new Web3(Web3.givenProvider);
         let accounts = await web3.eth.getAccounts();
         let account = accounts[0];
         setAccount(account);
@@ -74,8 +75,6 @@ function App() {
         if (nftMintingContract) {
           setContract(nftMintingContract);
         }
-      } else {
-        throw Error("No wallet found");
       }
     } catch (err) {
       console.log("Error in connect wallet", err);
@@ -162,7 +161,6 @@ function App() {
           </h1>
           {nftData &&
             nftData.map((arr, i) => {
-              console.log("i", i);
               return (
                 <div className="col-lg-3 col-md-4 col-sm-6  nftcard">
                   <div className="image-over mt-3">
