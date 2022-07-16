@@ -75,7 +75,7 @@ function App() {
           setContract(nftMintingContract);
         }
       } else {
-        throw "No wallet found";
+        throw Error("No wallet found");
       }
     } catch (err) {
       console.log("Error in connect wallet", err);
